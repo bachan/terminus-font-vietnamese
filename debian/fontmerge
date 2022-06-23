@@ -1,0 +1,13 @@
+#!/usr/bin/fontforge -lang=ff 
+
+Open ($2);
+
+i=3
+while ( i<$argc )
+  Import ($argv[i])
+  i = i+1
+endloop
+
+Generate ($1);
+
+Close ();

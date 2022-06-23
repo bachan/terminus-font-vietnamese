@@ -1,0 +1,20 @@
+xfonts-terminus (4.48-3) unstable; urgency=medium
+
+    Since version 1.44 of Pango, the programs using this layout engine
+    (and in particular all programs using the Gtk library) are no longer
+    able to use PCF fonts.  Therefore, the users are advised to use the
+    fonts in the package fonts-terminus-otb.
+
+    In order to avoid redundancy, this package no longer contains a file
+    50-enable-terminus.conf.  Such a file is provided in the package
+    fonts-terminus-otb.  Consequently, in the default configuration the
+    fonts of this package remain unavailable to the programs using
+    fontconfig.  In order ensure smoother upgrade, this package now
+    recommends fonts-terminus-otb.
+
+    Since different rendering engines are used for PCF and OTB fonts, the
+    font sizes are not compatible.  You may need to reconfigure your
+    programs to use different font size.  Notice also that the OTB fonts
+    support non-integer font sizes.
+
+ -- Anton Zinoviev <zinoviev@debian.org>  Mon, 25 May 2020 11:52:41 +0300

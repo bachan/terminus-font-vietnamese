@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "configure" -a -n "$DISPLAY" ]; then
+    # no error even if xset is not installed or the X server refuses
+    xset fp rehash 2>/dev/null || true 
+fi
+
+#DEBHELPER#
+
+exit 0
